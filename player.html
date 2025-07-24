@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ALBUM</title>
+    <link rel="stylesheet" href="player-styles.css">
+</head>
+<body>
+    <div class="theme-toggle" id="themeToggle"> </div>
+    <a href="index.html" class="back-home">← HOME</a>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-item" data-section="studio-albums">
+                <span class="nav-number">01</span>
+                <span class="nav-text">STUDIO</span>
+            </div>
+            <div class="nav-item" data-section="collaborative">
+                <span class="nav-number">02</span>
+                <span class="nav-text">COLLAB</span>
+            </div>
+            <div class="nav-item" data-section="unreleased">
+                <span class="nav-number">03</span>
+                <span class="nav-text">UNRELEASED</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="audio-player" id="audioPlayer">
+        <div class="player-info">
+            <div class="track-cover">
+                <img src="images/cover/placeholder.jpg" alt="Track Cover" id="playerCover">
+            </div>
+            <div class="track-details">
+                <div class="track-title" id="playerTitle">Seleziona una traccia</div>
+                <div class="track-artist" id="playerArtist">Kanye West</div>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button class="control-btn" id="prevBtn">⏮</button>
+            <button class="control-btn play-pause" id="playPauseBtn">▶</button>
+            <button class="control-btn" id="nextBtn">⏭</button>
+        </div>
+        <div class="player-progress">
+            <span class="time-current" id="currentTime">0:00</span>
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span class="time-total" id="totalTime">0:00</span>
+        </div>
+        <audio id="audioElement"></audio>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">ALL<br>MUSIC</h1>
+            <div class="page-stats">
+                <div class="stat-item">
+                    <span class="stat-number">200 +</span>
+                    <span class="stat-label">TRACCE</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">20 +</span>
+                    <span class="stat-label">ALBUM</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">20 +</span>
+                    <span class="stat-label">ANNI</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="studio-albums">
+            <div class="section-header">
+                <h2 class="section-title">STUDIO ALBUMS</h2>
+                <span class="section-count">2004-2024</span>
+            </div>
+
+            <div class="albums-container">
+                <div class="album-player" data-album="college-dropout">
+                    <div class="album-header">
+                        <div class="album-cover">
+                            <img src="images/cover/tcd.jpg" alt="The College Dropout">
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">THE COLLEGE DROPOUT</h3>
+                            <p class="album-year">2004</p>
+                            <p class="album-description">Album di debutto rivoluzionario che ha cambiato l'hip-hop con soul samples e tematiche personali. "Through the Wire" registrata con la mascella rotta.</p>
+                            <button class="expand-btn">MOSTRA TRACKLIST</button>
+                        </div>
+                    </div>
+                    <div class="tracklist">
+                        <div class="track-item" data-track="audio/tcd/01-intro.mp3">
+                            <span class="track-number">01</span>
+                            <span class="track-name">Intro</span>
+                            <span class="track-duration">0:19</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/02-we-dont-care.mp3">
+                            <span class="track-number">02</span>
+                            <span class="track-name">We Don't Care</span>
+                            <span class="track-duration">3:59</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/03-graduation-day.mp3">
+                            <span class="track-number">03</span>
+                            <span class="track-name">Graduation Day</span>
+                            <span class="track-duration">1:22</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/04-all-falls-down.mp3">
+                            <span class="track-number">04</span>
+                            <span class="track-name">All Falls Down (feat. Syleena Johnson)</span>
+                            <span class="track-duration">3:43</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/05-ill-fly-away.mp3">
+                            <span class="track-number">05</span>
+                            <span class="track-name">I'll Fly Away</span>
+                            <span class="track-duration">1:09</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/06-spaceship.mp3">
+                            <span class="track-number">06</span>
+                            <span class="track-name">Spaceship (feat. GLC & Consequence)</span>
+                            <span class="track-duration">5:24</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/07-jesus-walks.mp3">
+                            <span class="track-number">07</span>
+                            <span class="track-name">Jesus Walks</span>
+                            <span class="track-duration">3:13</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/08-never-let-me-down.mp3">
+                            <span class="track-number">08</span>
+                            <span class="track-name">Never Let Me Down (feat. Jay-Z & J. Ivy)</span>
+                            <span class="track-duration">5:24</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/09-get-em-high.mp3">
+                            <span class="track-number">09</span>
+                            <span class="track-name">Get Em High (feat. Talib Kweli & Common)</span>
+                            <span class="track-duration">4:49</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/10-workout-plan.mp3">
+                            <span class="track-number">10</span>
+                            <span class="track-name">The New Workout Plan</span>
+                            <span class="track-duration">5:22</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/11-slow-jamz.mp3">
+                            <span class="track-number">11</span>
+                            <span class="track-name">Slow Jamz (feat. Twista & Jamie Foxx)</span>
+                            <span class="track-duration">5:16</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/12-breathe-in-breathe-out.mp3">
+                            <span class="track-number">12</span>
+                            <span class="track-name">Breathe In Breathe Out (feat. Ludacris)</span>
+                            <span class="track-duration">4:06</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/13-school-spirit-skit1.mp3">
+                            <span class="track-number">13</span>
+                            <span class="track-name">School Spirit Skit 1</span>
+                            <span class="track-duration">1:18</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/14-school-spirit.mp3">
+                            <span class="track-number">14</span>
+                            <span class="track-name">School Spirit</span>
+                            <span class="track-duration">3:02</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/15-school-spirit-skit2.mp3">
+                            <span class="track-number">15</span>
+                            <span class="track-name">School Spirit Skit 2</span>
+                            <span class="track-duration">0:43</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/16-lil-jimmy-skit.mp3">
+                            <span class="track-number">16</span>
+                            <span class="track-name">Lil Jimmy Skit</span>
+                            <span class="track-duration">0:53</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/17-two-words.mp3">
+                            <span class="track-number">17</span>
+                            <span class="track-name">Two Words (feat. Mos Def, Freeway & The Harlem Boys Choir)</span>
+                            <span class="track-duration">4:26</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/18-through-the-wire.mp3">
+                            <span class="track-number">18</span>
+                            <span class="track-name">Through the Wire</span>
+                            <span class="track-duration">3:41</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/19-family-business.mp3">
+                            <span class="track-number">19</span>
+                            <span class="track-name">Family Business</span>
+                            <span class="track-duration">4:38</span>
+                        </div>
+                        <div class="track-item" data-track="audio/tcd/20-last-call.mp3">
+                            <span class="track-number">20</span>
+                            <span class="track-name">Last Call</span>
+                            <span class="track-duration">12:40</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="album-player" data-album="late-registration">
+                    <div class="album-header">
+                        <div class="album-cover">
+                            <img src="images/cover/late.jpg" alt="Late Registration">
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">LATE REGISTRATION</h3>
+                            <p class="album-year">2005</p>
+                            <p class="album-description">Secondo album con arrangiamenti orchestrali di Jon Brion. "Gold Digger" raggiunge il #1. Espansione del sound soul-hip hop.</p>
+                            <button class="expand-btn">MOSTRA TRACKLIST</button>
+                        </div>
+                    </div>
+                    <div class="tracklist">
+                        <div class="track-item" data-track="audio/late/01-wake-up-mr-west.mp3">
+                            <span class="track-number">01</span>
+                            <span class="track-name">Wake Up Mr. West</span>
+                            <span class="track-duration">0:41</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/02-heard-em-say.mp3">
+                            <span class="track-number">02</span>
+                            <span class="track-name">Heard 'Em Say (feat. Adam Levine)</span>
+                            <span class="track-duration">3:23</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/03-touch-the-sky.mp3">
+                            <span class="track-number">03</span>
+                            <span class="track-name">Touch the Sky (feat. Lupe Fiasco)</span>
+                            <span class="track-duration">3:57</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/04-gold-digger.mp3">
+                            <span class="track-number">04</span>
+                            <span class="track-name">Gold Digger (feat. Jamie Foxx)</span>
+                            <span class="track-duration">3:28</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/05-skit1.mp3">
+                            <span class="track-number">05</span>
+                            <span class="track-name">Skit #1</span>
+                            <span class="track-duration">0:25</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/06-drive-slow.mp3">
+                            <span class="track-number">06</span>
+                            <span class="track-name">Drive Slow (feat. Paul Wall & GLC)</span>
+                            <span class="track-duration">4:32</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/07-my-way-home.mp3">
+                            <span class="track-number">07</span>
+                            <span class="track-name">My Way Home (feat. Common)</span>
+                            <span class="track-duration">1:34</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/08-crack-music.mp3">
+                            <span class="track-number">08</span>
+                            <span class="track-name">Crack Music (feat. The Game)</span>
+                            <span class="track-duration">4:31</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/09-roses.mp3">
+                            <span class="track-number">09</span>
+                            <span class="track-name">Roses</span>
+                            <span class="track-duration">4:05</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/10-bring-me-down.mp3">
+                            <span class="track-number">10</span>
+                            <span class="track-name">Bring Me Down (feat. Brandy)</span>
+                            <span class="track-duration">3:18</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/11-addiction.mp3">
+                            <span class="track-number">11</span>
+                            <span class="track-name">Addiction</span>
+                            <span class="track-duration">4:27</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/12-skit2.mp3">
+                            <span class="track-number">12</span>
+                            <span class="track-name">Skit #2</span>
+                            <span class="track-duration">0:28</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/13-diamonds-from-sierra-leone.mp3">
+                            <span class="track-number">13</span>
+                            <span class="track-name">Diamonds from Sierra Leone (Remix) (feat. Jay-Z)</span>
+                            <span class="track-duration">4:04</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/14-we-major.mp3">
+                            <span class="track-number">14</span>
+                            <span class="track-name">We Major (feat. Nas & Really Doe)</span>
+                            <span class="track-duration">7:28</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/15-skit3.mp3">
+                            <span class="track-number">15</span>
+                            <span class="track-name">Skit #3</span>
+                            <span class="track-duration">0:31</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/16-hey-mama.mp3">
+                            <span class="track-number">16</span>
+                            <span class="track-name">Hey Mama</span>
+                            <span class="track-duration">5:05</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/17-celebration.mp3">
+                            <span class="track-number">17</span>
+                            <span class="track-name">Celebration</span>
+                            <span class="track-duration">3:18</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/18-skit4.mp3">
+                            <span class="track-number">18</span>
+                            <span class="track-name">Skit #4</span>
+                            <span class="track-duration">2:30</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/19-gone.mp3">
+                            <span class="track-number">19</span>
+                            <span class="track-name">Gone (feat. Consequence & Cam'ron)</span>
+                            <span class="track-duration">6:00</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/20-diamonds-from-sierra-leone-original.mp3">
+                            <span class="track-number">20</span>
+                            <span class="track-name">Diamonds from Sierra Leone (Bonus Track)</span>
+                            <span class="track-duration">3:58</span>
+                        </div>
+                        <div class="track-item" data-track="audio/late/21-late.mp3">
+                            <span class="track-number">21</span>
+                            <span class="track-name">Late (feat. Consequence)</span>
+                            <span class="track-duration">3:51</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="album-player" data-album="mbdtf">
+                    <div class="album-header">
+                        <div class="album-cover">
+                            <img src="images/cover/mbdtf.jpg" alt="My Beautiful Dark Twisted Fantasy">
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">MY BEAUTIFUL DARK TWISTED FANTASY</h3>
+                            <p class="album-year">2010</p>
+                            <p class="album-description">Capolavoro universalmente acclamato nato dall'esilio post-Taylor Swift. 18 mesi di produzione in Hawaii. Considerato album del decennio.</p>
+                            <button class="expand-btn">MOSTRA TRACKLIST</button>
+                        </div>
+                    </div>
+                    <div class="tracklist">
+                        <div class="track-item" data-track="audio/mbdtf/01-dark-fantasy.mp3">
+                            <span class="track-number">01</span>
+                            <span class="track-name">Dark Fantasy</span>
+                            <span class="track-duration">4:40</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/02-gorgeous.mp3">
+                            <span class="track-number">02</span>
+                            <span class="track-name">Gorgeous (feat. Kid Cudi & Raekwon)</span>
+                            <span class="track-duration">5:57</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/03-power.mp3">
+                            <span class="track-number">03</span>
+                            <span class="track-name">POWER</span>
+                            <span class="track-duration">4:52</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/04-all-of-the-lights-interlude.mp3">
+                            <span class="track-number">04</span>
+                            <span class="track-name">All of the Lights (Interlude)</span>
+                            <span class="track-duration">1:02</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/05-all-of-the-lights.mp3">
+                            <span class="track-number">05</span>
+                            <span class="track-name">All of the Lights</span>
+                            <span class="track-duration">4:59</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/06-monster.mp3">
+                            <span class="track-number">06</span>
+                            <span class="track-name">Monster (feat. Jay-Z, Rick Ross, Nicki Minaj)</span>
+                            <span class="track-duration">6:18</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/07-so-appalled.mp3">
+                            <span class="track-number">07</span>
+                            <span class="track-name">So Appalled (feat. Jay-Z, Pusha T, Prynce Cy Hi, Swizz Beatz, RZA)</span>
+                            <span class="track-duration">6:38</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/08-devil-in-a-new-dress.mp3">
+                            <span class="track-number">08</span>
+                            <span class="track-name">Devil in a New Dress (feat. Rick Ross)</span>
+                            <span class="track-duration">5:52</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/09-runaway.mp3">
+                            <span class="track-number">09</span>
+                            <span class="track-name">Runaway (feat. Pusha T)</span>
+                            <span class="track-duration">9:08</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/10-hell-of-a-life.mp3">
+                            <span class="track-number">10</span>
+                            <span class="track-name">Hell of a Life</span>
+                            <span class="track-duration">5:27</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/11-blame-game.mp3">
+                            <span class="track-number">11</span>
+                            <span class="track-name">Blame Game (feat. John Legend)</span>
+                            <span class="track-duration">7:49</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/12-lost-in-the-world.mp3">
+                            <span class="track-number">12</span>
+                            <span class="track-name">Lost in the World (feat. Bon Iver)</span>
+                            <span class="track-duration">4:16</span>
+                        </div>
+                        <div class="track-item" data-track="audio/mbdtf/13-who-will-survive-in-america.mp3">
+                            <span class="track-number">13</span>
+                            <span class="track-name">Who Will Survive in America</span>
+                            <span class="track-duration">1:38</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="album-player" data-album="yeezus">
+                    <div class="album-header">
+                        <div class="album-cover">
+                            <img src="images/cover/yeezus.jpg" alt="Yeezus">
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">YEEZUS</h3>
+                            <p class="album-year">2013</p>
+                            <p class="album-description">Album minimalista e industriale prodotto con Rick Rubin. Sound aggressivo e sperimentale che ha diviso critica e pubblico ma influenzato il futuro.</p>
+                            <button class="expand-btn">MOSTRA TRACKLIST</button>
+                        </div>
+                    </div>
+                    <div class="tracklist">
+                        <div class="track-item" data-track="audio/yeezus/01-on-sight.mp3">
+                            <span class="track-number">01</span>
+                            <span class="track-name">On Sight</span>
+                            <span class="track-duration">2:32</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yeezus/02-black-skinhead.mp3">
+                            <span class="track-number">02</span>
+                            <span class="track-name">Black Skinhead</span>
+                            <span class="track-duration">3:08</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yeezus/03-i-am-a-god.mp3">
+                            <span class="track-number">03</span>
+                            <span class="track-name">I Am a God (feat. God)</span>
+                            <span class="track-duration">3:51</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yeezus/04-new-slaves.mp3">
+                            <span class="track-number">04</span>
+                            <span class="track-name">New Slaves</span>
+                            <span class="track-duration">4:16</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yeezus/05-hold-my-liquor.mp3">
+                            <span class="track-number">05</span>
+                            <span class="track-name">Hold My Liquor (feat. Chief Keef & Justin Vernon)</span>
+                            <span class="track-duration">5:27</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yeezus/06-im-in-it.mp3">
+                            <span class="track-number">06</span>
+                            <span class="track-name">I'm In It</span>
+                            <span class="track-duration">3:54</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yeezus/07-blood-on-the-leaves.mp3">
+                            <span class="track-number">07</span>
+                            <span class="track-name">Blood on the Leaves</span>
+                            <span class="track-duration">6:00</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yeezus/08-guilt-trip.mp3">
+                            <span class="track-number">08</span>
+                            <span class="track-name">Guilt Trip (feat. Kid Cudi)</span>
+                            <span class="track-duration">4:03</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yeezus/09-send-it-up.mp3">
+                            <span class="track-number">09</span>
+                            <span class="track-name">Send It Up (feat. King Louie)</span>
+                            <span class="track-duration">2:58</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yeezus/10-bound-2.mp3">
+                            <span class="track-number">10</span>
+                            <span class="track-name">Bound 2</span>
+                            <span class="track-duration">3:50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="collaborative">
+            <div class="section-header">
+                <h2 class="section-title">COLLABORATIVE</h2>
+                <span class="section-count">2011-2024</span>
+            </div>
+
+            <div class="albums-container">
+                <div class="album-player" data-album="wtt">
+                    <div class="album-header">
+                        <div class="album-cover">
+                            <img src="images/cover/throne.jpg" alt="Watch The Throne">
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">WATCH THE THRONE</h3>
+                            <p class="album-year">2011</p>
+                            <p class="album-description">Supergruppo con Jay-Z. "Niggas in Paris" suonata 11 volte consecutive in concerto. Celebrazione di lusso e successo.</p>
+                            <button class="expand-btn">MOSTRA TRACKLIST</button>
+                        </div>
+                    </div>
+                    <div class="tracklist">
+                        <div class="track-item" data-track="audio/wtt/01-no-church-in-the-wild.mp3">
+                            <span class="track-number">01</span>
+                            <span class="track-name">No Church in the Wild (feat. Frank Ocean & The-Dream)</span>
+                            <span class="track-duration">4:32</span>
+                        </div>
+                        <div class="track-item" data-track="audio/wtt/02-lift-off.mp3">
+                            <span class="track-number">02</span>
+                            <span class="track-name">Lift Off (feat. Beyoncé)</span>
+                            <span class="track-duration">4:02</span>
+                        </div>
+                        <div class="track-item" data-track="audio/wtt/03-niggas-in-paris.mp3">
+                            <span class="track-number">03</span>
+                            <span class="track-name">Niggas in Paris</span>
+                            <span class="track-duration">3:39</span>
+                        </div>
+                        <div class="track-item" data-track="audio/wtt/04-otis.mp3">
+                            <span class="track-number">04</span>
+                            <span class="track-name">Otis (feat. Otis Redding)</span>
+                            <span class="track-duration">2:58</span>
+                        </div>
+                        <div class="track-item" data-track="audio/wtt/05-gotta-have-it.mp3">
+                            <span class="track-number">05</span>
+                            <span class="track-name">Gotta Have It</span>
+                            <span class="track-duration">2:25</span>
+                        </div>
+                        <div class="track-item" data-track="audio/wtt/06-new-day.mp3">
+                            <span class="track-number">06</span>
+                            <span class="track-name">New Day</span>
+                            <span class="track-duration">4:27</span>
+                        </div>
+                        <div class="track-item" data-track="audio/wtt/07-thats-my-bitch.mp3">
+                            <span class="track-number">07</span>
+                            <span class="track-name">That's My Bitch (feat. Elly Jackson)</span>
+                            <span class="track-duration">3:24</span>
+                        </div>
+                        <div class="track-item" data-track="audio/wtt/08-welcome-to-the-jungle.mp3">
+                            <span class="track-number">08</span>
+                            <span class="track-name">Welcome to the Jungle</span>
+                            <span class="track-duration">3:29</span>
+                        </div>
+                        <div class="track-item" data-track="audio/wtt/09-who-gon-stop-me.mp3">
+                            <span class="track-number">09</span>
+                            <span class="track-name">Who Gon Stop Me</span>
+                            <span class="track-duration">3:59</span>
+                        </div>
+                        <div class="track-item" data-track="audio/wtt/10-murder-to-excellence.mp3">
+                            <span class="track-number">10</span>
+                            <span class="track-name">Murder to Excellence</span>
+                            <span class="track-duration">4:25</span>
+                        </div>
+                        <div class="track-item" data-track="audio/wtt/11-made-in-america.mp3">
+                            <span class="track-number">11</span>
+                            <span class="track-name">Made in America (feat. Frank Ocean)</span>
+                            <span class="track-duration">5:23</span>
+                        </div>
+                        <div class="track-item" data-track="audio/wtt/12-why-i-love-you.mp3">
+                            <span class="track-number">12</span>
+                            <span class="track-name">Why I Love You (feat. Mr. Hudson)</span>
+                            <span class="track-duration">3:07</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="album-player" data-album="ksg">
+                    <div class="album-header">
+                        <div class="album-cover">
+                            <img src="images/cover/kids.jpg" alt="Kids See Ghosts">
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">KIDS SEE GHOSTS</h3>
+                            <p class="album-year">2018</p>
+                            <p class="album-description">Supergruppo con Kid Cudi. 7 tracce di psych-rap puro. Parte delle Wyoming Sessions. Copertina di Takashi Murakami.</p>
+                            <button class="expand-btn">MOSTRA TRACKLIST</button>
+                        </div>
+                    </div>
+                    <div class="tracklist">
+                        <div class="track-item" data-track="audio/ksg/01-feel-the-love.mp3">
+                            <span class="track-number">01</span>
+                            <span class="track-name">Feel the Love (feat. Pusha T)</span>
+                            <span class="track-duration">2:45</span>
+                        </div>
+                        <div class="track-item" data-track="audio/ksg/02-fire.mp3">
+                            <span class="track-number">02</span>
+                            <span class="track-name">Fire</span>
+                            <span class="track-duration">1:39</span>
+                        </div>
+                        <div class="track-item" data-track="audio/ksg/03-4th-dimension.mp3">
+                            <span class="track-number">03</span>
+                            <span class="track-name">4th Dimension (feat. Louis Prima)</span>
+                            <span class="track-duration">2:38</span>
+                        </div>
+                        <div class="track-item" data-track="audio/ksg/04-freeee.mp3">
+                            <span class="track-number">04</span>
+                            <span class="track-name">Freeee (Ghost Town Pt. 2) (feat. Ty Dolla $ign)</span>
+                            <span class="track-duration">3:22</span>
+                        </div>
+                        <div class="track-item" data-track="audio/ksg/05-reborn.mp3">
+                            <span class="track-number">05</span>
+                            <span class="track-name">Reborn</span>
+                            <span class="track-duration">5:32</span>
+                        </div>
+                        <div class="track-item" data-track="audio/ksg/06-kids-see-ghosts.mp3">
+                            <span class="track-number">06</span>
+                            <span class="track-name">Kids See Ghosts (feat. Yasiin Bey)</span>
+                            <span class="track-duration">3:27</span>
+                        </div>
+                        <div class="track-item" data-track="audio/ksg/07-cudi-montage.mp3">
+                            <span class="track-number">07</span>
+                            <span class="track-name">Cudi Montage</span>
+                            <span class="track-duration">3:16</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="unreleased">
+            <div class="section-header">
+                <h2 class="section-title">UNRELEASED</h2>
+                <span class="section-count">LEAKED/CANCELLED</span>
+            </div>
+
+            <div class="albums-container">
+                <div class="album-player" data-album="yandhi">
+                    <div class="album-header">
+                        <div class="album-cover">
+                            <img src="images/cover/yandhi.jpg" alt="Yandhi">
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">YANDHI</h3>
+                            <p class="album-year">2018-2019</p>
+                            <p class="album-description">Sequel spirituale di Yeezus. Heavily leaked online. Trasformato in Jesus Is King dopo la conversione religiosa.</p>
+                            <button class="expand-btn">MOSTRA TRACKLIST</button>
+                        </div>
+                    </div>
+                    <div class="tracklist">
+                        <div class="track-item" data-track="audio/yandhi/01-sky-city.mp3">
+                            <span class="track-number">01</span>
+                            <span class="track-name">Sky City</span>
+                            <span class="track-duration">3:12</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yandhi/02-alien.mp3">
+                            <span class="track-number">02</span>
+                            <span class="track-name">Alien (feat. Young Thug & Ant Clemons)</span>
+                            <span class="track-duration">4:23</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yandhi/03-hurricane.mp3">
+                            <span class="track-number">03</span>
+                            <span class="track-name">Hurricane (feat. Ant Clemons & Lil Baby)</span>
+                            <span class="track-duration">3:45</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yandhi/04-new-body.mp3">
+                            <span class="track-number">04</span>
+                            <span class="track-name">New Body (feat. Nicki Minaj & Ty Dolla $ign)</span>
+                            <span class="track-duration">3:18</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yandhi/05-law-of-attraction.mp3">
+                            <span class="track-number">05</span>
+                            <span class="track-name">Law of Attraction (Use This Gospel)</span>
+                            <span class="track-duration">4:02</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yandhi/06-last-name.mp3">
+                            <span class="track-number">06</span>
+                            <span class="track-name">Last Name (feat. Ant Clemons)</span>
+                            <span class="track-duration">3:56</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yandhi/07-chakras.mp3">
+                            <span class="track-number">07</span>
+                            <span class="track-name">Chakras</span>
+                            <span class="track-duration">2:48</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yandhi/08-we-got-love.mp3">
+                            <span class="track-number">08</span>
+                            <span class="track-name">We Got Love (feat. Teyana Taylor)</span>
+                            <span class="track-duration">4:15</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yandhi/09-the-storm.mp3">
+                            <span class="track-number">09</span>
+                            <span class="track-name">The Storm (feat. XXXTentacion & Ty Dolla $ign)</span>
+                            <span class="track-duration">3:33</span>
+                        </div>
+                        <div class="track-item" data-track="audio/yandhi/10-slave-name.mp3">
+                            <span class="track-number">10</span>
+                            <span class="track-name">Slave Name</span>
+                            <span class="track-duration">2:27</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="album-player" data-album="good-ass-job">
+                    <div class="album-header">
+                        <div class="album-cover">
+                            <img src="images/cover/gas.jpg" alt="Good Ass Job">
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">GOOD ASS JOB</h3>
+                            <p class="album-year">2009-2010</p>
+                            <p class="album-description">Quarto album della serie educativa, cancellato dopo l'incidente Taylor Swift. Alcune tracce finite in MBDTF.</p>
+                            <button class="expand-btn">MOSTRA TRACKLIST</button>
+                        </div>
+                    </div>
+                    <div class="tracklist">
+                        <div class="track-item" data-track="audio/gas/01-good-ass-intro.mp3">
+                            <span class="track-number">01</span>
+                            <span class="track-name">Good Ass Intro</span>
+                            <span class="track-duration">2:15</span>
+                        </div>
+                        <div class="track-item" data-track="audio/gas/02-power-remix.mp3">
+                            <span class="track-number">02</span>
+                            <span class="track-name">Power (Original Version)</span>
+                            <span class="track-duration">4:12</span>
+                        </div>
+                        <div class="track-item" data-track="audio/gas/03-mama-boyfriend.mp3">
+                            <span class="track-number">03</span>
+                            <span class="track-name">Mama's Boyfriend (feat. Consequence)</span>
+                            <span class="track-duration">3:45</span>
+                        </div>
+                        <div class="track-item" data-track="audio/gas/04-see-me-now.mp3">
+                            <span class="track-number">04</span>
+                            <span class="track-name">See Me Now (feat. Beyoncé & Charlie Wilson)</span>
+                            <span class="track-duration">6:03</span>
+                        </div>
+                        <div class="track-item" data-track="audio/gas/05-good-ass-job.mp3">
+                            <span class="track-number">05</span>
+                            <span class="track-name">Good Ass Job (feat. Consequence & Really Doe)</span>
+                            <span class="track-duration">4:28</span>
+                        </div>
+                        <div class="track-item" data-track="audio/gas/06-christian-dior-denim-flow.mp3">
+                            <span class="track-number">06</span>
+                            <span class="track-name">Christian Dior Denim Flow (feat. Pusha T, John Legend, Lloyd Banks, Ryan Leslie)</span>
+                            <span class="track-duration">5:47</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="player-script.js"></script>
+</body>
+</html>
